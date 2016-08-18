@@ -65,3 +65,46 @@ else if(answer5.toLowerCase() === 'no' || (answer5.toUpperCase() === 'NO') || (a
   alert('That\'s too bad');
   console.log('That\'s too bad');
 }
+//single line comment (Question 6 - favorite number) =/
+var number;
+var counter = 0;
+
+while (number !== 7) {
+  number = parseInt(prompt('What is my favorite number?'));
+  if (counter === 4) {
+    break;
+  }
+  if (number < 7) {
+    alert('guessed too low');
+    counter++;
+  } else if (number > 7) {
+    alert('guessed too high');
+    counter++;
+  } else if (number === NaN || number === null) {
+    alert('enter a number please');
+    counter++;
+  }
+}
+console.log('counter:', counter);
+//single line comment (Question 7 - Name a country I have lived in before) =/
+counter = 0;
+var country = ['Bahamas', 'Pakistan', 'Kenya', 'UAE'];
+var flag;
+
+while (counter !== 6) {
+  var answer7 = prompt('Name a country I have lived in before moving to the states? Hint: I have lived in 3 continents.');
+  console.log('current country guessed: ', answer7);
+  for (var i = 0; i < country.length; i++) {
+    if (answer7 === country[i]) {
+      alert('Woohoo! You guessed a country right!!!');
+      flag = true;
+      break;
+    }
+  }
+  counter++;
+  console.log(counter);
+}
+
+if (!flag) {
+  alert('Wrong... nice try! This is not an easy guess. I actually lived in, ' + country);
+}

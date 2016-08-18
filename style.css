@@ -1,11 +1,21 @@
 header {
   background: #0000B8;
-  color: #000000;
-
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color : #fff;
 }
 
-h1 {
-  font-size: 100px;
+main {
+  background:##0000ff;
+}
+body {
+  font-size: 10px;
   margin-bottom: 5px;
-  color : #fff;
+  outline: dotted 5px orange;
+}
+
+footer {
+  background: #0000B8;
+  padding: 5px;
 }
